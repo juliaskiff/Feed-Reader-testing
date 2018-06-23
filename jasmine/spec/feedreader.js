@@ -32,7 +32,7 @@ $(function() {
          * and that the URL is not empty.
          */
 
-        it('has a defined url which is not empty', function(){
+        it('have a defined url which is not empty', function(){
             allFeeds.forEach(function(feed){
                 expect(feed.url).toBeDefined();
                 expect(feed.url.length).not.toBe(0); 
@@ -44,7 +44,7 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
-        it('has a defined name which is not empty', function(){
+        it('have a defined name which is not empty', function(){
             allFeeds.forEach(function(feed){
                 expect(feed.name).toBeDefined();
                 expect(feed.name.length).not.toBe(0); 
@@ -63,7 +63,7 @@ $(function() {
          * hiding/showing of the menu element.
          */
 
-        it('has a hidden menu', function(){
+        it('is hidden', function(){
             expect($('body').hasClass('menu-hidden')).toBe(true);
         })
 
@@ -73,7 +73,7 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
 
-        it('toggles menu visibility when menu icon is clicked', function(){
+        it('toggles visibility when icon is clicked', function(){
             //show the menu
             $('a.menu-icon-link').trigger('click'); 
             expect($('body').hasClass('menu-hidden')).toBe(false);
@@ -98,7 +98,7 @@ $(function() {
             loadFeed(0, done);
         });
 
-        it('has at least a single element', function(){
+        it('have at least a single element', function(){
             expect($('.feed .entry').length).toBeGreaterThan(0);
         });
     });
